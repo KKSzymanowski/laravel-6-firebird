@@ -1,0 +1,33 @@
+{
+  "name": "kkszymanowski/laravel-6-firebird",
+  "description": "A Firebird database package for Laravel 6",
+  "license": "MIT",
+  "version": "6.0.0",
+  "authors": [
+    {
+      "name": "Kuba Szymanowski",
+      "email": "kubaszymanowski@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "^6.0",
+    "illuminate/container": "^6.0",
+    "illuminate/database": "^6.0",
+    "illuminate/events": "^6.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Firebird\\FirebirdServiceProvider"
+      ]
+    }
+  },
+  "autoload":{
+    "psr-4": {
+      "Firebird\\": "src/"
+    }
+  }
+}
