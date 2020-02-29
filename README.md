@@ -12,12 +12,12 @@ Add you database configuration in `config/database.php`
 ```php
 'connections' => [
     'myFirebirdConnection' => [
-        'driver'   => 'firebird',
-        'host'     => env('DB_FIREBIRD_HOST'),
-        'database' => env('DB_FIREBIRD_DATABASE'),
-        'username' => env('DB_FIREBIRD_USERNAME'),
-        'password' => env('DB_FIREBIRD_PASSWORD'),
-        'charset'  => env('DB_FIREBIRD_CHARSET'),
+        'driver'=> 'firebird',
+        'host'=> env('DB_FIREBIRD_HOST', localhost),
+        'database' => env('DB_FIREBIRD_DATABASE', '/path_to/database.fdb'),
+        'username' => env('DB_FIREBIRD_USERNAME', 'SYSDBA'),
+        'password' => env('DB_FIREBIRD_PASSWORD', 'masterkey'),
+        'charset' => env('DB_FIREBIRD_CHARSET', 'UTF8'),
     ],
 
     // ...
@@ -39,5 +39,5 @@ to your Firebird models.
 
 If you're just running SQLs you can do:
 ```php
-DB::connection('myFirebirdConnection')->select($sql, $bindings);
+$users = DB::connection('myFirebirdConnection')->table('USERS')->select($sql, $bindings);
 ```
