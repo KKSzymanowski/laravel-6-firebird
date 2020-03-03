@@ -13,7 +13,7 @@ Add you database configuration in `config/database.php`
 'connections' => [
     'myFirebirdConnection' => [
         'driver'=> 'firebird',
-        'host'=> env('DB_FIREBIRD_HOST', localhost),
+        'host'=> env('DB_FIREBIRD_HOST', 'localhost'),
         'database' => env('DB_FIREBIRD_DATABASE', '/path_to/database.fdb'),
         'username' => env('DB_FIREBIRD_USERNAME', 'SYSDBA'),
         'password' => env('DB_FIREBIRD_PASSWORD', 'masterkey'),
