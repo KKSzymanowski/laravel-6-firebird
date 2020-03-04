@@ -57,5 +57,5 @@ $sql = 'SELECT * FROM USERS WHERE id = ?';
 $bindings = 1;
 $user = DB::connection('myFirebirdConnection')->select($sql, $bindings);
 
-$users = DB::connection('myFirebirdConnection')->table('USERS')->select('*');
+$users = DB::connection('myFirebirdConnection')->table('USERS')->select('*')->get();
 ```
