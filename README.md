@@ -53,8 +53,8 @@ $users = User::all();
 #### DB Query
 Each time you have to define connecion name, for example:
 ```php
-$sql = 'SELECT * FROM USERS WHERE id = ?';
-$bindings = 1;
+$sql = 'SELECT * FROM USERS WHERE id = :id';
+$bindings = ['id' => 1];
 $user = DB::connection('myFirebirdConnection')->select($sql, $bindings);
 
 $users = DB::connection('myFirebirdConnection')->table('USERS')->select('*')->get();
