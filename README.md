@@ -12,12 +12,12 @@ Add you database configuration in `config/database.php`
 ```php
 'connections' => [
     'myFirebirdConnection' => [
-        'driver'   => 'firebird',
-        'host'     => env('DB_FIREBIRD_HOST'),
-        'database' => env('DB_FIREBIRD_DATABASE'),
-        'username' => env('DB_FIREBIRD_USERNAME'),
-        'password' => env('DB_FIREBIRD_PASSWORD'),
-        'charset'  => env('DB_FIREBIRD_CHARSET'),
+        'driver'=> 'firebird',
+        'host'=> env('DB_FIREBIRD_HOST', 'localhost'),
+        'database' => env('DB_FIREBIRD_DATABASE', '/path_to/database.fdb'),
+        'username' => env('DB_FIREBIRD_USERNAME', 'SYSDBA'),
+        'password' => env('DB_FIREBIRD_PASSWORD', 'masterkey'),
+        'charset' => env('DB_FIREBIRD_CHARSET', 'UTF8'),
     ],
 
     // ...
@@ -31,13 +31,31 @@ DB_FIREBIRD_USERNAME=user
 DB_FIREBIRD_PASSWORD=password
 DB_FIREBIRD_CHARSET=ISO-8859-2
 ```
-If you're using models add
+
+### Usage
+#### Eloquent as model
+To override your default database connection define `$connection` name in your Eloquent Model
 ```php
+/**
+ * The connection name for the model.
+ *
+ * @var string
+ */
 protected $connection = 'myFirebirdConnection';
 ```
-to your Firebird models.
-
-If you're just running SQLs you can do:
+After defining connection name you can use it in normal way as you use Eloquent:
 ```php
-DB::connection('myFirebirdConnection')->select($sql, $bindings);
+$user = User::where('id', 1)->get();
+
+$users = User::all();
+```
+
+#### DB Query
+Each time you have to define connecion name (if it isn't your default one), for example:
+```php
+$sql = 'SELECT * FROM USERS WHERE id = :id';
+$bindings = ['id' => 1];
+$user = DB::connection('myFirebirdConnection')->select($sql, $bindings);
+
+$users = DB::connection('myFirebirdConnection')->table('USERS')->select('*')->get();
 ```
