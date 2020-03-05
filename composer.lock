@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97876b70786883ffe5cf53250832355b",
+    "content-hash": "f50f764b7ab43ddb5f41032cebfb456d",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -75,7 +75,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.0.3",
+            "version": "v6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -120,7 +120,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.0.3",
+            "version": "v6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -164,7 +164,7 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.0.3",
+            "version": "v6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
@@ -223,53 +223,8 @@
             "time": "2019-09-20T20:58:27+00:00"
         },
         {
-            "name": "illuminate/events",
-            "version": "v6.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/events.git",
-                "reference": "3762761daa6e53305d361a98c927c76b2d3d2108"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/3762761daa6e53305d361a98c927c76b2d3d2108",
-                "reference": "3762761daa6e53305d361a98c927c76b2d3d2108",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/container": "^6.0",
-                "illuminate/contracts": "^6.0",
-                "illuminate/support": "^6.0",
-                "php": "^7.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Events\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate Events package.",
-            "homepage": "https://laravel.com",
-            "time": "2019-09-10T15:16:05+00:00"
-        },
-        {
             "name": "illuminate/support",
-            "version": "v6.0.3",
+            "version": "v6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -692,7 +647,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2"
+        "php": "^7.2",
+        "ext-pdo": "*"
     },
     "platform-dev": []
 }

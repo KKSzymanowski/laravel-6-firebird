@@ -2,21 +2,23 @@
   "name": "kkszymanowski/laravel-6-firebird",
   "description": "A Firebird database package for Laravel 6",
   "license": "MIT",
-  "version": "6.0.0",
   "authors": [
     {
       "name": "Kuba Szymanowski",
       "email": "kubaszymanowski@gmail.com"
+    },
+    {
+      "name": "Jacques van Zuydam",
+      "email": "jtvanzuydam@gmail.com"
     }
   ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
     "php": "^7.2",
+    "ext-pdo": "*",
     "illuminate/support": "^6.0",
-    "illuminate/container": "^6.0",
-    "illuminate/database": "^6.0",
-    "illuminate/events": "^6.0"
+    "illuminate/database": "^6.0"
   },
   "extra": {
     "laravel": {

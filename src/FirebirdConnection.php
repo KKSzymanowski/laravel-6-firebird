@@ -26,4 +26,16 @@ class FirebirdConnection extends Connection
     protected function getDefaultSchemaGrammar() {
         return $this->withTablePrefix(new FirebirdSchemaGrammar());
     }
+
+    /**
+     * Get a new query builder instance.
+     *
+     * @return FirebirdQueryBuilder
+     */
+    public function query()
+    {
+        return new FirebirdQueryBuilder(
+            $this, $this->getQueryGrammar(), $this->getPostProcessor()
+        );
+    }
 }
