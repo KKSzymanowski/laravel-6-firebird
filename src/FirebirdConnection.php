@@ -2,7 +2,6 @@
 
 namespace Firebird;
 
-use Firebird\Query\FirebirdQueryGrammar;
 use Illuminate\Database\Connection;
 use Illuminate\Database\Grammar;
 

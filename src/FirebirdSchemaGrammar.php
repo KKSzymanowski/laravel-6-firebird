@@ -1,4 +1,6 @@
-<?php namespace Firebird;
+<?php
+
+namespace Firebird;
 
 use Illuminate\Database\Connection;
 use Illuminate\Database\Schema\Grammars\Grammar;

@@ -1,4 +1,6 @@
-<?php namespace Firebird\Query;
+<?php
+
+namespace Firebird;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\Grammars\Grammar;
