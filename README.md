@@ -1,6 +1,6 @@
 ## Firebird database driver for Laravel 6
 
-Package inspired by [jacquestvanzuydam/laravel-firebird](https://github.com/jacquestvanzuydam/laravel-firebird/blob/master/composer.json) but simplified, modernized and made compatible with Laravel 6.
+Package inspired by [jacquestvanzuydam/laravel-firebird](https://github.com/jacquestvanzuydam/laravel-firebird) but simplified, modernized and made compatible with Laravel 6.
 
 I do not create my own Firebird databases, only read from existing ones so the INSERT and UPDATE support may be spotty.
 
@@ -23,7 +23,7 @@ Add you database configuration in `config/database.php`
     // ...
 ],
 ```
-Add the `DB_FIREBIRD_*` environment variables to you `.env` file, for example:
+Add the `DB_FIREBIRD_*` environment variables to your `.env` file, for example:
 ```
 DB_FIREBIRD_HOST=192.168.0.1
 DB_FIREBIRD_DATABASE=C:/DB.FDB
