@@ -1,6 +1,6 @@
 ## Firebird database driver for Laravel 6
 
-Package inspired by [jacquestvanzuydam/laravel-firebird](https://github.com/jacquestvanzuydam/laravel-firebird) but simplified, modernized and made compatible with Laravel 6.
+Package inspired by [jacquestvanzuydam/laravel-firebird](https://github.com/jacquestvanzuydam/laravel-firebird) but simplified, modernized and made compatible with Laravel 6, 7 and 8.
 
 I do not create my own Firebird databases, only read from existing ones so the INSERT and UPDATE support may be spotty.
 
