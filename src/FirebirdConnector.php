@@ -22,7 +22,8 @@ class FirebirdConnector extends Connector implements ConnectorInterface
         $path = $config['database'];
         $charset = $config['charset'];
         $host = $config['host'];
+        $port = $config['port'];
 
-        return $this->createConnection("firebird:dbname={$host}:{$path};charSet={$charset}", $config, $options);
+        return $this->createConnection("firebird:dbname={$host}/{$port}:{$path};charSet={$charset}", $config, $options);
     }
 }
