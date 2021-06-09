@@ -27,6 +27,7 @@ Add you database configuration in `config/database.php`
 Add the `DB_FIREBIRD_*` environment variables to your `.env` file, for example:
 ```
 DB_FIREBIRD_HOST=192.168.0.1
+DB_FIREBIRD_PORT=3306
 DB_FIREBIRD_DATABASE=C:/DB.FDB
 DB_FIREBIRD_USERNAME=user
 DB_FIREBIRD_PASSWORD=password
