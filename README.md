@@ -12,13 +12,13 @@ Add you database configuration in `config/database.php`
 ```php
 'connections' => [
     'myFirebirdConnection' => [
-        'driver'    => 'firebird',
-        'host'      => env('DB_FIREBIRD_HOST', 'localhost'),
-        'port'      => env('DB_FIREBIRD_PORT', '3306'),
-        'database'  => env('DB_FIREBIRD_DATABASE', '/path_to/database.fdb'),
-        'username'  => env('DB_FIREBIRD_USERNAME', 'SYSDBA'),
-        'password'  => env('DB_FIREBIRD_PASSWORD', 'masterkey'),
-        'charset'   => env('DB_FIREBIRD_CHARSET', 'UTF8'),
+        'driver'   => 'firebird',
+        'host'     => env('DB_FIREBIRD_HOST', 'localhost'),
+        'port'     => env('DB_FIREBIRD_PORT', '3050'),
+        'database' => env('DB_FIREBIRD_DATABASE', '/path_to/database.fdb'),
+        'username' => env('DB_FIREBIRD_USERNAME', 'SYSDBA'),
+        'password' => env('DB_FIREBIRD_PASSWORD', 'masterkey'),
+        'charset'  => env('DB_FIREBIRD_CHARSET', 'UTF8'),
     ],
 
     // ...
@@ -27,7 +27,7 @@ Add you database configuration in `config/database.php`
 Add the `DB_FIREBIRD_*` environment variables to your `.env` file, for example:
 ```
 DB_FIREBIRD_HOST=192.168.0.1
-DB_FIREBIRD_PORT=3306
+DB_FIREBIRD_PORT=3050
 DB_FIREBIRD_DATABASE=C:/DB.FDB
 DB_FIREBIRD_USERNAME=user
 DB_FIREBIRD_PASSWORD=password
