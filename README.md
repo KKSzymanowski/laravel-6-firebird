@@ -1,4 +1,4 @@
-## Firebird database driver for Laravel 6
+## Firebird database driver for Laravel 6, 7 and 8.
 
 Package inspired by [jacquestvanzuydam/laravel-firebird](https://github.com/jacquestvanzuydam/laravel-firebird) but simplified, modernized and made compatible with Laravel 6, 7 and 8.
 
