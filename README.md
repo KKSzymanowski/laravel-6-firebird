@@ -1,4 +1,4 @@
-## Firebird database driver for Laravel 6, 7 and 8.
+## Firebird database driver for Laravel 6, 7, 8 and 9.
 
 Package inspired by [jacquestvanzuydam/laravel-firebird](https://github.com/jacquestvanzuydam/laravel-firebird) but simplified, modernized and made compatible with Laravel 6, 7 and 8.
 
@@ -53,7 +53,7 @@ $users = User::all();
 ```
 
 #### DB Query
-Each time you have to define connecion name (if it isn't your default one), for example:
+Each time you have to define connection name (if it isn't your default one), for example:
 ```php
 $sql = 'SELECT * FROM USERS WHERE id = :id';
 $bindings = ['id' => 1];
